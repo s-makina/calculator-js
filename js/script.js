@@ -21,23 +21,29 @@ new Vue({
 				}
 				else if(value == 'x^2'){
 					this.expression = this.square();
+					this.a = true;
 				}
 				
 				else if(value == 'radic'){
 					this.expression = Math.sqrt(this.expression);
+					this.a = true;
 				}
 				else if(value == 'log'){
 					this.expression = Math.log(this.expression);
+					this.a = true;
 				}
 				else if(value == 'sin'){
 					this.expression = Math.sin(this.expression);
+					this.a = true;
 				}
 				else if(value == 'cos'){
 					this.expression = Math.cos(this.expression);
+					this.a = true;
 				}
 
 				else if(value == 'tan'){
 					this.expression = Math.tan(this.expression);
+					this.a = true;
 				}
 
 				else if(value == 'ans'){
@@ -48,9 +54,8 @@ new Vue({
 					const answer = eval(this.expression);
 					this.expression = answer;
 					this.a = true;
-					
 				} else {
-					if( this.a && this.value >= 0) this.expression = '';
+					if( this.a && value >= 0 && value <= 9) this.expression = '';
 					this.a = false;
 					this.expression += value;
 				}

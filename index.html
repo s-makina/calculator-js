@@ -8,155 +8,153 @@
     
     <!-- Bootstrap 4 CSS -->
 		<link rel="stylesheet" href="./css/bootstrap.min.css">   
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
   	<script src="./js/vue@2.7.13.js"></script>
   </head>
   <body>
       
 	<section>
-  
-  <table class="calculator table table-borderless" id="calculator-el">
-		<thead>			
-			<tr>
-				<td class="p-1" colspan=7>
-					<div class="output form-group">
-						<input type="text" class="ans form-control bg-white text-right border" readonly name="" placeholder="0" v-model="expression">
-					</div>				
-				</td>
-			</tr>
-		</thead>
-		<tbody class="actions">		
-			<tr>
-				<td class="p-1" colspan=2>
-					<div class="bg-light rounded ">
-						<button @click="actionBtn" class="btn rounded ml-4" data-value='rad'>Rad</button>
-						<span class=" ml-2"> | </span>
-						<button @click="actionBtn" class="btn rounded ml-4" data-value='deg'>Deg</button>	
-					</div>
-				</td>
-				<td class="p-1">
-					<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='x^2'>x&#xb2;</button>				
-				</td>
-				<td class="p-1">
-					<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='*('>(</button>				
-				</td>
-				<td class="p-1">
-					<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value=')'>)</button>				
-					
-				</td>
-				<td class="p-1">
-					<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='%'>%</button>			
-					
-				</td>
-				<td class="p-1">
-					<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='ac'>AC</button>				
-					
-				</td>
-			</tr>
-			<tr>
-				<td class="p-1">
-					<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='inv'>Inv</button>				
-				</td>
-				<td class="p-1">
-					<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='sin'>sin</button>			
-				</td>
-				<td class="p-1">
-					<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='ln'>ln</button>				
-				</td>
-				<td class="p-1">
-					<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='7'>7</button>
-				</td>
-				<td class="p-1">
-					<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='8'>8</button>				
-				</td>
-				<td class="p-1">
-					<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='9'>9</button>				
-				</td>
-				<td class="p-1">
-					<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='/'>&#x00f7;</button>				
-					
-				</td>
-			</tr>			
-			<tr>
-				<td class="p-1">
-					<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='*3.14'>&pi;</button>				
-				</td>
-				<td class="p-1">
-					<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='cos'>cos</button>			
-				</td>
-				<td class="p-1">
-					<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='log'>log</button>				
-				</td>
-				<td class="p-1">
-					<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='4'>4</button>
-				</td>
-				<td class="p-1">
-					<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='5'>5</button>				
-				</td>
-				<td class="p-1">
-					<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='6'>6</button>				
-				</td>
-				<td class="p-1">
-					<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='*'>	&times;</button>
-				</td>
-			</tr>
+	  <table class="calculator table table-borderless" id="calculator-el">
+			<thead>			
+				<tr>
+					<td class="p-1" colspan=7>
+						<div class="output form-group">
+							<input type="text" class="ans form-control bg-white text-right border" readonly name="" placeholder="0" v-model="expression">
+						</div>				
+					</td>
+				</tr>
+			</thead>
+			<tbody class="actions">		
+				<tr>
+					<td class="p-1" colspan=2>
+						<div class="bg-light rounded ">
+							<button @click="actionBtn" class="btn rounded ml-4" data-value='rad'>Rad</button>
+							<span class=" ml-2"> | </span>
+							<button @click="actionBtn" class="btn rounded ml-4" data-value='deg'>Deg</button>	
+						</div>
+					</td>
+					<td class="p-1">
+						<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='x^2'>x&#xb2;</button>				
+					</td>
+					<td class="p-1">
+						<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='*('>(</button>				
+					</td>
+					<td class="p-1">
+						<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value=')'>)</button>				
+						
+					</td>
+					<td class="p-1">
+						<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='%'>%</button>			
+						
+					</td>
+					<td class="p-1">
+						<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='ac'>AC</button>				
+						
+					</td>
+				</tr>
+				<tr>
+					<td class="p-1">
+						<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='inv'>Inv</button>				
+					</td>
+					<td class="p-1">
+						<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='sin'>sin</button>			
+					</td>
+					<td class="p-1">
+						<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='ln'>ln</button>				
+					</td>
+					<td class="p-1">
+						<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='7'>7</button>
+					</td>
+					<td class="p-1">
+						<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='8'>8</button>				
+					</td>
+					<td class="p-1">
+						<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='9'>9</button>				
+					</td>
+					<td class="p-1">
+						<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='/'>&#x00f7;</button>				
+						
+					</td>
+				</tr>			
+				<tr>
+					<td class="p-1">
+						<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='*3.14'>&pi;</button>				
+					</td>
+					<td class="p-1">
+						<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='cos'>cos</button>			
+					</td>
+					<td class="p-1">
+						<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='log'>log</button>				
+					</td>
+					<td class="p-1">
+						<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='4'>4</button>
+					</td>
+					<td class="p-1">
+						<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='5'>5</button>				
+					</td>
+					<td class="p-1">
+						<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='6'>6</button>				
+					</td>
+					<td class="p-1">
+						<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='*'>	&times;</button>
+					</td>
+				</tr>
 
-			<tr>
-				<td class="p-1">
-					<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='e'>e</button>				
-				</td>
+				<tr>
+					<td class="p-1">
+						<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='e'>e</button>				
+					</td>
 
-				<td class="p-1">
-					<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='tan'>tan</button>			
-				</td>
+					<td class="p-1">
+						<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='tan'>tan</button>			
+					</td>
 
-				<td class="p-1">
-					<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='radic'>&radic;</button>				
-				</td>
+					<td class="p-1">
+						<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='radic'>&radic;</button>				
+					</td>
 
-				<td class="p-1">
-					<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='1'>1</button>				
-				</td>
+					<td class="p-1">
+						<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='1'>1</button>				
+					</td>
 
-				<td class="p-1">
-					<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='2'>2</button>				
-				</td>
-				<td class="p-1">
-					<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='3'>3</button>
-				</td>
-				<td class="p-1">
-					<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='-'>-</button>
-				</td>
-			</tr>
-			<tr>
-				<td class="p-1">
-					<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='ans'>Ans</button>			
-				</td>				
-				<td class="p-1">
-					<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='exp'>EXP</button>			
-				</td>
+					<td class="p-1">
+						<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='2'>2</button>				
+					</td>
+					<td class="p-1">
+						<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='3'>3</button>
+					</td>
+					<td class="p-1">
+						<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='-'>-</button>
+					</td>
+				</tr>
+				<tr>
+					<td class="p-1">
+						<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='ans'>Ans</button>			
+					</td>				
+					<td class="p-1">
+						<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='exp'>EXP</button>			
+					</td>
 
-				<td class="p-1">
-					<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='**'>
-						x&#94;
-					</button>		
-				</td>
-				<td class="p-1">
-					<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='0'>0</button>				
-				</td>
-				<td class="p-1">
-					<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='.'>.</button>
-				</td>
-				<td class="p-1">
-					<button @click="actionBtn" class="btn btn-primary btn-bg rounded" data-value='='>=</button>				
-				</td>
-				<td class="p-1">
-					<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='+'>+</button>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-
+					<td class="p-1">
+						<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='**'>
+							x&#94;
+						</button>		
+					</td>
+					<td class="p-1">
+						<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='0'>0</button>				
+					</td>
+					<td class="p-1">
+						<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='.'>.</button>
+					</td>
+					<td class="p-1">
+						<button @click="actionBtn" class="btn btn-primary btn-bg rounded" data-value='='>=</button>				
+					</td>
+					<td class="p-1">
+						<button @click="actionBtn" class="btn btn-light btn-bg  rounded" data-value='+'>+</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
 	</section>
 	
 	<!-- JavaScript Bundle with Popper -->
